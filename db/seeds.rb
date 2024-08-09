@@ -117,72 +117,72 @@ user_guest = User.create(
 
 flight1 = Flight.create(
   direction: 'arrival',
-  datetime: '2024-08-01 18:00:00',
+  datetime: '2025-08-01 18:00:00',
   airport: 'Bush',
   airline: '(IAH) Frontier',
   number: 4672,
   traveler: carol,
-  datetime_string: '2024-08-01T12:00:00-06:00'
+  datetime_string: '2025-08-01T12:00:00-06:00'
 )
 
 flight2 = Flight.create(
   direction: 'arrival',
-  datetime: '2024-07-28 05:37:00',
+  datetime: '2025-07-28 05:37:00',
   airport: 'Bush',
   airline: '(IAH) United',
   number: 7843,
   traveler: natalia,
-  datetime_string: '2024-07-27T23:37:00-06:00'
+  datetime_string: '2025-07-27T23:37:00-06:00'
 )
 
 flight3 = Flight.create(
   direction: 'departure',
-  datetime: '2024-08-01 22:23:00',
+  datetime: '2025-08-01 22:23:00',
   airport: 'Hobby',
   airline: '(HOU) Frontier',
   number: 8893,
   traveler: natalia,
-  datetime_string: '2024-08-01T16:23:00-06:00'
+  datetime_string: '2025-08-01T16:23:00-06:00'
 )
 
 flight4 = Flight.create(
   direction: 'arrival',
-  datetime: '2024-07-28 05:38:00',
+  datetime: '2025-07-28 05:38:00',
   airport: 'Bush',
   airline: '(IAH) JetBlue',
   number: 3098,
   traveler: steve,
-  datetime_string: '2024-07-27T23:38:00-06:00'
+  datetime_string: '2025-07-27T23:38:00-06:00'
 )
 
 flight5 = Flight.create(
   direction: 'departure',
-  datetime: '2024-08-01 22:22:21',
+  datetime: '2025-08-01 22:22:21',
   airport: 'Bush',
   airline: '(IAH) Delta',
   number: 5781,
   traveler: steve,
-  datetime_string: '2024-08-01T16:22:21-06:00'
+  datetime_string: '2025-08-01T16:22:21-06:00'
 )
 
 flight6 = Flight.create(
   direction: 'departure',
-  datetime: '2024-08-02 17:00:54',
+  datetime: '2025-08-02 17:00:54',
   airport: 'Hobby',
   airline: '(HOU) Spirit',
   number: 5468,
-  traveler: steve,
-  datetime_string: '2024-08-02T10:00:54-07:00'
+  traveler: gamora,
+  datetime_string: '2025-08-02T10:00:54-07:00'
 )
 
 flight7 = Flight.create(
   direction: 'arrival',
-  datetime: '2024-07-29 21:10:13',
+  datetime: '2025-07-29 21:10:13',
   airport: 'Hobby',
   airline: '(HOU) American',
   number: 8874,
   traveler: okoye,
-  datetime_string: '2024-07-29T14:10:13-07:00'
+  datetime_string: '2025-07-29T14:10:13-07:00'
 )
 
 ### FLIGHTS end ###
@@ -191,60 +191,60 @@ flight7 = Flight.create(
 ### SHUTTLES start ###
 
 shuttle1 = Shuttle.create(
-  datetime: '2024-07-28 05:37:00',
-  datetime_string: '2024-07-27T23:37:00-06:00'
+  datetime: '2025-07-28 05:37:00',
+  datetime_string: '2025-07-27T23:37:00-06:00'
 )
 shuttle2 = Shuttle.create(
-  datetime: '2024-08-01 18:00:00',
-  datetime_string: '2024-08-01T12:00:00-06:00'
+  datetime: '2025-08-01 18:00:00',
+  datetime_string: '2025-08-01T12:00:00-06:00'
 )
 shuttle3 = Shuttle.create(
-  datetime: '2024-08-01 22:22:21',
-  datetime_string: '2024-08-01T16:22:21-06:00'
+  datetime: '2025-08-01 22:22:21',
+  datetime_string: '2025-08-01T16:22:21-06:00'
 )
 shuttle4 = Shuttle.create(
-  datetime: '2024-08-01 22:23:00',
-  datetime_string: '2024-08-01T16:23:00-06:00'
+  datetime: '2025-08-01 22:23:00',
+  datetime_string: '2025-08-01T16:23:00-06:00'
 )
 shuttle5 = Shuttle.create(
-  datetime: '2024-08-01 22:23:00',
-  datetime_string: '2024-08-01T16:23:00-06:00'
+  datetime: '2025-08-01 22:23:00',
+  datetime_string: '2025-08-01T16:23:00-06:00'
 )
 shuttle6 = Shuttle.create(
-  datetime: '2024-07-28 06:40:00',
-  datetime_string: '2024-07-27T23:40:00-07:00'
+  datetime: '2025-07-28 06:40:00',
+  datetime_string: '2025-07-27T23:40:00-07:00'
 )
 shuttle7 = Shuttle.create(
-  datetime: '2024-07-28 05:38:00',
-  datetime_string: '2024-07-27T23:38:00-06:00'
+  datetime: '2025-07-28 05:38:00',
+  datetime_string: '2025-07-27T23:38:00-06:00'
 )
 shuttle8 = Shuttle.create(
-  datetime: '2024-07-28 05:37:00',
-  datetime_string: '2024-07-27T23:37:00-06:00'
+  datetime: '2025-07-28 05:37:00',
+  datetime_string: '2025-07-27T23:37:00-06:00'
 )
 shuttle9 = Shuttle.create(
-  datetime: '2024-07-28 05:37:00',
-  datetime_string: '2024-07-27T23:37:00-06:00'
+  datetime: '2025-07-28 05:37:00',
+  datetime_string: '2025-07-27T23:37:00-06:00'
 )
 shuttle10 = Shuttle.create(
-  datetime: '2024-08-01 22:23:00',
-  datetime_string: '2024-08-01T16:23:00-06:00'
+  datetime: '2025-08-01 22:23:00',
+  datetime_string: '2025-08-01T16:23:00-06:00'
 )
 shuttle11 = Shuttle.create(
-  datetime: '2024-07-29 21:10:13',
-  datetime_string: '2024-07-29T14:10:13-07:00'
+  datetime: '2025-07-29 21:10:13',
+  datetime_string: '2025-07-29T14:10:13-07:00'
 )
 shuttle12 = Shuttle.create(
-  datetime: '2024-07-28 05:38:00',
-  datetime_string: '2024-07-27T23:38:00-06:00'
+  datetime: '2025-07-28 05:38:00',
+  datetime_string: '2025-07-27T23:38:00-06:00'
 )
 shuttle13 = Shuttle.create(
-  datetime: '2024-08-01 18:00:00',
-  datetime_string: '2024-08-01T12:00:00-06:00'
+  datetime: '2025-08-01 18:00:00',
+  datetime_string: '2025-08-01T12:00:00-06:00'
 )
 shuttle14 = Shuttle.create(
-  datetime: '2024-07-28 05:37:00',
-  datetime_string: '2024-07-27T23:37:00-06:00'
+  datetime: '2025-07-28 05:37:00',
+  datetime_string: '2025-07-27T23:37:00-06:00'
 )
 
 ### SHUTTLES end ###
@@ -259,8 +259,8 @@ ride1 = Ride.create(
   shuttle: shuttle13
 )
 ride2 = Ride.create(
-  driver: steve,
-  traveler: groot,
+  driver: groot,
+  traveler: steve,
   flight: flight5,
   shuttle: shuttle3
 )
