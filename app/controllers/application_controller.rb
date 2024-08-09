@@ -1,23 +1,49 @@
 class ApplicationController < ActionController::API
   before_action :authenticate
 
+  def auth_header
+    request.headers['Authorization']
+  end
+
   def authenticate
-    authorization_header = request.headers[:authorization]
+    return if current_user
 
-    if !authorization_header
-      render json: { error: 'Must be logged in. Send bearer token.' }, status: :forbidden
+    render_forbidden_error 'Invalid login attempt.'
+  end
+
+  def current_user
+    if !auth_header
+      render_forbidden_error 'Must be logged in. Send Bearer token.'
     else
-      token = authorization_header.split(' ')[1]
-      secret_key =
-        ENV['SECRET_KEY_BASE'] ||
-        Rails.application.secrets.secret_key_base[0]
-      begin
-        decoded_token = JWT.decode token, secret_key
-        @user = User.find decoded_token[0]['user_id']
-      rescue
-        render json: { error: 'Invalid token.' }, status: :forbidden
-      end
-
+      attempt_decode_token
     end
   end
+
+  def attempt_decode_token
+    token = auth_header.split(' ')[1]
+    begin
+      decoded_token = JWT.decode token, secret_key
+      parse_token decoded_token
+    rescue
+      render_forbidden_error 'Invalid token.'
+    end
+  end
+
+  def parse_token(decoded_token)
+    payload = decoded_token.first
+    user_id = payload['user_id']
+
+    @user = User.find user_id
+  end
+
+  def secret_key
+    ENV['SECRET_KEY_BASE'] || Rails.application.secrets.secret_key_base[0]
+  end
+
+  private
+
+  def render_forbidden_error(message)
+    render json: { error: message }, status: :forbidden
+  end
+
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :shuttles
 
   post 'login', to: 'authentication#login'
+  get 'authenticate', to: 'authentication#logged_in?'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
