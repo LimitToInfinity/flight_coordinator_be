@@ -82,3 +82,4 @@ production:
   database: flight_coordinator_be_production
   username: flight_coordinator_be
   password: <%= ENV["FLIGHT_COORDINATOR_BE_DATABASE_PASSWORD"] %>
+  host: postgres.railway.internal
