@@ -79,7 +79,8 @@ test:
 #
 production:
   <<: *default
-  database: flight_coordinator_be_production
-  username: flight_coordinator_be
-  password: <%= ENV["FLIGHT_COORDINATOR_BE_DATABASE_PASSWORD"] %>
-  host: postgres.railway.internal
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  host: <%= ENV["PGHOST"] %>
+  url: <%= ENV["DATABASE_URL"] %>
